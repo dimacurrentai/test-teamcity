@@ -1,3 +1,5 @@
 # `test-teamcity`
 
-Her be dragons.
+Here be dragons.
+
+To test `uv run pytest`.

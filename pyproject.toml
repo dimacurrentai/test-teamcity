@@ -1,0 +1,30 @@
+[project]
+name = "test-teamcity"
+version = "0.1.0"
+description = "A tiny example library with an add(a, b) function and pytest tests."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [ { name = "Dima Korolev" } ]
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+dev-dependencies = [
+  "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-vv"
+pythonpath = ["src"]
+testpaths = ["tests"]
