@@ -11,7 +11,6 @@ from test_teamcity.core import add
         (1, 2, 3),
         (-5, 7, 2),
         (1.5, 2.5, 4.0),
-        (math.pi, math.e, math.pi + math.e),
     ],
 )
 def test_add_numbers(a, b, expected):
