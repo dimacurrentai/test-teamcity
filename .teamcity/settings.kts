@@ -4,20 +4,19 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.script
 version = "2025.01"
 
 project {
-    buildType(SimpleBuild)
+    buildType(UvPytestBuild)
 }
 
-object SimpleBuild : BuildType({
-    name = "Simple Build"
+object UvPytestBuild : BuildType({
+    name = "Command line: echo + pytest"
 
     steps {
         script {
-            name = "Hello"
-            scriptContent = """echo "Hello, World!""""
-        }
-        script {
-            name = "Pytest"
-            scriptContent = """uv run pytest"""
+            name = "Echo and run pytest"
+            scriptContent = """
+                echo dima
+                uv run pytest
+            """.trimIndent()
         }
     }
 })
