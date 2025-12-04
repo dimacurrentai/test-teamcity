@@ -23,7 +23,9 @@ packages = ["src/test_teamcity"]
 
 [tool.uv]
 package = true
-dev-dependencies = [
+
+[dependency-groups]
+dev = [
   "pytest>=8.0.0",
 ]
 
