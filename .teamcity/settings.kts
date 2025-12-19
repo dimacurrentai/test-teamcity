@@ -1,22 +1,18 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.script
 
-version = "2025.01"
+version = "2023.11"
 
 project {
-    buildType(UvPytestBuild)
+    buildType(HelloWorld)
 }
 
-object UvPytestBuild : BuildType({
-    name = "Command line: echo + pytest"
+object HelloWorld : BuildType({
+    name = "Hello World"
 
     steps {
         script {
-            name = "Echo and run pytest"
-            scriptContent = """
-                echo dima
-                uv run pytest
-            """.trimIndent()
+            name = "Echo"
+            scriptContent = "echo Hello from TeamCity"
         }
     }
 })
